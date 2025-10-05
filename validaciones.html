@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validaciones</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Validaciones -->
     <header>
         <h1>Validaciones de formularios</h1>
     </header>
@@ -22,20 +24,21 @@
         <section>
         <h2>Validación de Datos del Usuario</h2>
 
-        <form action="#" method="post">
+    <!-- Formulario de validación  -->
+    <form id="form-validacion" action="#" method="post">
 
-            <!-- Campo de correo obligatorio -->
+            <!-- correo -->
             <label for="correo">Correo electrónico:</label>
             <input type="email" id="correo" name="correo" 
                 placeholder="Ej. usuario@correo.com" required>
 
-            <!-- Campo de contraseña con longitud mínima y máxima -->
+            <!-- Contraseña -->
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena"
                 placeholder="Entre 6 y 12 caracteres"
                 pattern=".{6,12}" required>
 
-            <!-- Confirmar contraseña (solo planteado, validación será con JS) -->
+            <!-- Confirmar  -->
             <label for="confirmar">Confirmar contraseña:</label>
             <input type="password" id="confirmar" name="confirmar"
                 placeholder="Repite tu contraseña" required>
@@ -49,15 +52,5 @@
         </section>
     </main>
 
-    <script>
-        // Validación simple por JavaScript (prevent default si inválido)
-        document.getElementById('form-validacion').addEventListener('submit', function(e) {
-            var email = document.getElementById('email');
-            if (!email.checkValidity()) {
-                e.preventDefault();
-                alert('Introduce un correo válido.');
-            }
-        });
-    </script>
 </body>
 </html>

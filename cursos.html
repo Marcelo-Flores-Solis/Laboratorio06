@@ -1,30 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursos</title>
-</head>
-<body>
-    <header>
-        <h1>Cursos disponibles</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="registro.html">Registro</a></li>
-            <li><a href="lenguajes.html">Lenguajes</a></li>
-            <li><a href="validaciones.html">Validaciones</a></li>
-        </ul>
-    </nav>
-
-    <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cursos - Laboratorio 06</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
@@ -37,7 +18,7 @@
       <li><a href="index.html">Inicio</a></li>
       <li><a href="registro.html">Registro</a></li>
       <li><a href="lenguajes.html">Lenguajes</a></li>
-      <li><a href="validacion.html">Validación</a></li>
+      <li><a href="validaciones.html">Validaciones</a></li>
       <li><a href="cursos.html">Cursos</a></li>
     </ul>
   </nav>
@@ -46,6 +27,7 @@
     <section>
       <h2>Inscripción</h2>
 
+      <!-- Formulario  -->
       <form action="#" method="post">
         
         <!-- Datos personales -->
@@ -70,7 +52,7 @@
           <option value="javascript">JavaScript Avanzado</option>
         </select>
 
-        <!-- Modalidad (solo una opción posible) -->
+        <!-- Modalidad  -->
         <p>Modalidad:</p>
         <input type="radio" id="presencial" name="modalidad" value="Presencial" required>
         <label for="presencial">Presencial</label>
@@ -78,7 +60,7 @@
         <input type="radio" id="virtual" name="modalidad" value="Virtual">
         <label for="virtual">Virtual</label>
 
-        <!-- Horarios (pueden ser varios) -->
+        <!-- Horarios  -->
         <p>Horarios disponibles:</p>
         <input type="checkbox" id="manana" name="horarios" value="Mañana">
         <label for="manana">Mañana</label><br>
