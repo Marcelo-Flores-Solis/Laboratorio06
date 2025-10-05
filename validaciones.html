@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones</title>
+</head>
+<body>
+    <header>
+        <h1>Validaciones de formularios</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="lenguajes.html">Lenguajes</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+        <h2>Validación de Datos del Usuario</h2>
+
+        <form action="#" method="post">
+
+            <!-- Campo de correo obligatorio -->
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" 
+                placeholder="Ej. usuario@correo.com" required>
+
+            <!-- Campo de contraseña con longitud mínima y máxima -->
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena"
+                placeholder="Entre 6 y 12 caracteres"
+                pattern=".{6,12}" required>
+
+            <!-- Confirmar contraseña (solo planteado, validación será con JS) -->
+            <label for="confirmar">Confirmar contraseña:</label>
+            <input type="password" id="confirmar" name="confirmar"
+                placeholder="Repite tu contraseña" required>
+
+            <!-- Botón para enviar -->
+            <div>
+            <input type="submit" value="Enviar">
+            </div>
+
+        </form>
+        </section>
+    </main>
+
+    <script>
+        // Validación simple por JavaScript (prevent default si inválido)
+        document.getElementById('form-validacion').addEventListener('submit', function(e) {
+            var email = document.getElementById('email');
+            if (!email.checkValidity()) {
+                e.preventDefault();
+                alert('Introduce un correo válido.');
+            }
+        });
+    </script>
+</body>
+</html>
